@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - შესვლა / რეგისტრაცია</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page-bg">
+    <div class="login-container">
+        <div class="login-logo"><i class="fab fa-pinterest"></i></div>
+        
+        <div id="register-box">
+            <h2>კეთილი იყოს შენი მობრძანება</h2>
+            <p>შექმენი ანგარიში ახალი იდეების აღმოსაჩენად</p>
+            <form id="register-form">
+                <div class="input-block">
+                    <label>მომხმარებლის სახელი</label>
+                    <input type="text" id="reg-name" placeholder="მაგ: მარიამი" required>
+                </div>
+                <div class="input-block">
+                    <label>ელ-ფოსტა</label>
+                    <input type="email" id="reg-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-block">
+                    <label>პაროლი</label>
+                    <input type="password" id="reg-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn">რეგისტრაცია</button>
+            </form>
+            <p class="toggle-form-text">უკვე გაქვს ანგარიში? <span id="go-to-login">შესვლა</span></p>
+        </div>
+
+        <div id="login-box" class="hidden">
+            <h2>სისტემაში შესვლა</h2>
+            <p>შეიყვანე შენი მონაცემები პროფილზე გადასასვლელად</p>
+            <form id="login-form">
+                <div class="input-block">
+                    <label>ელ-ფოსტა</label>
+                    <input type="email" id="login-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-block">
+                    <label>პაროლი</label>
+                    <input type="password" id="login-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn">შესვლა</button>
+            </form>
+            <p class="toggle-form-text">ახალი ხარ? <span id="go-to-reg">შექმენი ანგარიში</span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

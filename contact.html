@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - ფოტოს დამატება</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo"><i class="fab fa-pinterest"></i></a>
+            <a href="index.html" class="nav-btn">მთავარი</a>
+            <a href="contact.html" class="nav-btn active">ფოტოს დამატება</a>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" disabled placeholder="ფოტოს დასამატებლად შეავსეთ ფორმა...">
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" id="theme-btn"><i class="fas fa-moon"></i></div>
+            <a href="index.html" class="profile-link">
+                <div class="user-avatar" id="contact-avatar">U</div>
+            </a>
+        </div>
+    </header>
+
+    <main class="container flex-center">
+        <div class="form-wrapper">
+            <h2>დაამატე ფოტო შენს კოლექციაში</h2>
+            <p>ჩასვი ფოტოს ლინკი ინტერნეტიდან ან ატვირთე ფაილი პირდაპირ შენი მოწყობილობიდან.</p>
+            
+            <form id="add-pin-form">
+                <div class="input-block">
+                    <label>ფოტოს აღწერა / სათაური</label>
+                    <input type="text" id="pin-title" placeholder="მაგ: ჩემი ახალი მანიკური 💅" required>
+                </div>
+
+                <div class="input-block">
+                    <label>აირჩიე ალბომი</label>
+                    <select id="pin-album-select" class="styled-select"></select>
+                </div>
+
+                <div class="upload-mode-toggle">
+                    <button type="button" id="mode-url-btn" class="mode-toggle-btn active">🔗 ლინკით</button>
+                    <button type="button" id="mode-file-btn" class="mode-toggle-btn">📁 ფაილის ატვირთვა</button>
+                </div>
+
+                <div class="input-block" id="url-input-block">
+                    <label>ფოტოს URL ლინკი</label>
+                    <input type="url" id="pin-url" placeholder="https://images.unsplash.com/...">
+                </div>
+
+                <div class="input-block hidden" id="file-input-block">
+                    <label>აირჩიე ფოტო შენი მოწყობილობიდან</label>
+                    <div class="file-drop-zone" id="file-drop-zone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>დააჭირე ან გადმოათრიე ფოტო აქ</p>
+                        <span class="file-hint">JPG, PNG, WEBP (მაქს. 8MB)</span>
+                        <input type="file" id="pin-file" accept="image/*" class="hidden-file-input">
+                    </div>
+                    <div id="file-preview-box" class="file-preview-box hidden">
+                        <img id="file-preview-img" src="" alt="Preview">
+                        <button type="button" id="remove-file-btn" title="წაშლა"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">ალბომში შენახვა</button>
+            </form>
+            
+            <div id="success-box" class="success-alert hidden" style="text-align: center;">
+                <i class="fas fa-check-circle" style="color: #ff6b8b; font-size: 3.5rem; margin-bottom: 12px;"></i>
+                <h3>ფოტო წარმატებით ჩაემატა!</h3>
+                <a href="index.html" class="filter-btn active" style="display:inline-block; margin-top:20px; text-decoration:none;">მთავარზე ნახვა</a>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

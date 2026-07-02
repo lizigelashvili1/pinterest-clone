@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - აღმოაჩინე</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo"><i class="fab fa-pinterest"></i></a>
+            <a href="index.html" class="nav-btn">მთავარი</a>
+            <a href="catalog.html" class="nav-btn active">აღმოაჩინე</a>
+            <a href="contact.html" class="nav-btn">ფოტოს დამატება</a>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="აღმოაჩინე ახალი ტრენდები...">
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" id="theme-btn"><i class="fas fa-moon"></i></div>
+            <div class="user-avatar">M</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">ტრენდული იდეები მსოფლიოდან (Async/Await)</h2>
+        
+        <div id="loader" class="loader-box">
+            <div class="spinner"></div>
+            <p>კრეატიული ესთეტიკა იტვირთება სერვერიდან...</p>
+        </div>
+
+        <div id="catalog-grid" class="pin-masonry hidden"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - კრეატიული სივრცე</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo"><i class="fab fa-pinterest"></i></a>
+            <a href="index.html" class="nav-btn active">მთავარი</a>
+            <a href="catalog.html" class="nav-btn">აღმოაჩინე</a>
+            <a href="contact.html" class="nav-btn">ფოტოს დამატება</a>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="მოძებნე ესთეტიკა, ფრჩხილები, ტატუ...">
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" id="theme-btn"><i class="fas fa-moon"></i></div>
+            <a href="#profile-section" id="profile-nav-btn" class="profile-link">
+                <div class="user-avatar" id="nav-avatar">U</div>
+            </a>
+            <button id="logout-btn" class="logout-link"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="albums-filter" id="main-filter-bar">
+            <button class="filter-btn active" data-topic="nails,manicure">💅 ფრჩხილების ესთეტიკა</button>
+            <button class="filter-btn" data-topic="tattoo,aesthetic">✒️ ტატუები</button>
+            <button class="filter-btn" data-topic="cozy,interior">☕ მყუდრო ადგილები</button>
+            <button class="filter-btn" data-topic="architecture,house">🏡 ლამაზი სახლები</button>
+            <button class="filter-btn" data-topic="nature,flowers">🌸 ბუნება & ყვავილები</button>
+        </div>
+
+        <div id="main-loader" class="loader-box">
+            <div class="spinner"></div>
+            <p>Unsplash API-დან უამრავი ფოტო იტვირთება...</p>
+        </div>
+
+        <div id="home-grid" class="pin-masonry"></div>
+
+        <section id="profile-section" class="profile-container hidden">
+            <div class="profile-header">
+                <div class="big-avatar" id="profile-avatar">U</div>
+                <h2 id="profile-name">მომხმარებლის სახელი</h2>
+                <p id="profile-email">user@example.com</p>
+                
+                <div class="create-album-box">
+                    <input type="text" id="new-album-name" placeholder="ახალი ალბომის სახელი...">
+                    <button id="create-album-btn" class="filter-btn active">ალბომის შექმნა</button>
+                </div>
+                <button id="close-profile" class="filter-btn" style="margin-top: 15px;">მთავარზე დაბრუნება</button>
+            </div>
+            
+            <div class="my-albums-grid" id="user-albums-container">
+                </div>
+
+            <div id="profile-pins-grid" class="pin-masonry" style="margin-top: 30px;"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
